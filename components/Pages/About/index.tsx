@@ -287,7 +287,7 @@ const AboutPage = () => {
               <div className="relative w-full max-w-md flex items-center justify-center">
                 <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-xl border-4 border-white dark:border-darkmode">
                   <Image
-                    src={getImgPath('/images/profile-pic.jpeg')}
+                    src={getImgPath('/images/Updated-profile-pic.png')}
                     alt="Babar Ali - Full-Stack Developer"
                     width={320}
                     height={320}

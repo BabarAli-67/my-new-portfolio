@@ -1,29 +1,89 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
+import testimonialsData from '@/data/testimonials.json'
 
-const Testimonials = () => {
-  const testimonials = [
-    {
-      name: 'Dr. Ali Raza',
-      role: 'Professor & Project Supervisor',
-      comment: 'Babar is a highly skilled developer with deep understanding of AI integration.',
-      rating: 5,
-    },
-    {
-      name: 'Prof. Sana',
-      role: 'Senior Lecturer',
-      comment: 'His projects demonstrate creativity, problem-solving, and attention to detail.',
-      rating: 5,
-    },
-    {
-      name: 'Muhammad Ahmed',
-      role: 'Tech Lead',
-      comment: 'Working with Babar was a great experience. He delivers high-quality solutions and is always willing to learn and adapt.',
-      rating: 5,
-    },
-  ]
+interface Testimonial {
+  name: string;
+  role: string;
+  comment: string;
+  rating?: number;
+  image?: string;
+  linkedIn?: string;
+}
+
+const TestimonialCard = ({ testimonial, index }: { testimonial: Testimonial, index: number }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const words = testimonial.comment.split(' ');
+  const isLong = words.length > 30;
+
+  const displayComment = isLong && !isExpanded
+    ? words.slice(0, 30).join(' ') + '...'
+    : testimonial.comment;
 
   return (
-    <section className='bg-white dark:bg-darkmode' id='testimonials'>
+    <div
+      className='bg-section dark:bg-darklight p-8 rounded-lg shadow-service hover:shadow-xl transition-shadow duration-300 border border-border dark:border-dark_border flex flex-col h-full'
+      data-aos='fade-up'
+      data-aos-delay={index * 100}
+      data-aos-duration='1000'
+    >
+      {/* Author Info (Moved to top) */}
+      <div className='flex items-center mb-6'>
+        {testimonial.image ? (
+          <img src={testimonial.image} alt={testimonial.name} className='w-14 h-14 rounded-full object-cover mr-4 flex-shrink-0 border-2 border-primary/10' />
+        ) : (
+          <div className='w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center text-primary font-bold text-xl mr-4 flex-shrink-0'>
+            {testimonial.name.charAt(0)}
+          </div>
+        )}
+        <div>
+          <h4 className='text-lg font-bold text-midnight_text dark:text-white'>
+            {testimonial.linkedIn ? (
+              <a href={testimonial.linkedIn} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                {testimonial.name}
+              </a>
+            ) : (
+              testimonial.name
+            )}
+          </h4>
+          <p className='text-sm text-grey dark:text-white/50 font-medium'>
+            {testimonial.role}
+          </p>
+        </div>
+      </div>
+
+      {/* Rating Stars - Removed per user request */}
+
+      {/* Comment */}
+      <div className='relative flex-grow'>
+        <svg
+          className='w-8 h-8 text-primary opacity-20 absolute -top-2 -left-3 z-0'
+          fill='currentColor'
+          viewBox='0 0 24 24'>
+          <path d='M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.996 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.984zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z' />
+        </svg>
+        <p className='text-base text-grey dark:text-white/70 italic leading-relaxed relative z-10 pl-5'>
+          "{displayComment}"
+          <br />
+          {isLong && (
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="mt-2 text-primary hover:text-midnight_text dark:hover:text-white text-sm font-semibold transition-colors focus:outline-none"
+            >
+              {isExpanded ? 'Show less' : 'Read more'}
+            </button>
+          )}
+        </p>
+      </div>
+    </div>
+  );
+};
+
+const Testimonials = () => {
+  const testimonials: Testimonial[] = testimonialsData
+
+  return (
+    <section className='bg-white dark:bg-darkmode py-16' id='testimonials'>
       <div className='container mx-auto max-w-6xl px-4'>
         <div className='flex gap-2 items-center justify-center mb-8' data-aos='fade-up' data-aos-delay='200' data-aos-duration='1000'>
           <span className='w-3 h-3 rounded-full bg-success'></span>
@@ -32,55 +92,20 @@ const Testimonials = () => {
           </span>
         </div>
         <h2
-          className='text-4xl font-bold text-midnight_text text-center pb-12 dark:text-white'
+          className='text-4xl font-bold text-midnight_text text-center pb-4 dark:text-white'
           data-aos='fade-up'
           data-aos-delay='200'
           data-aos-duration='1000'>
           What People Say
         </h2>
+        <div data-aos='fade-up' data-aos-delay='300' data-aos-duration='1000'>
+          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-center pb-12">
+            Testimonials from colleagues, mentors, and clients
+          </p>
+        </div>
         <div className='grid md:grid-cols-3 grid-cols-1 gap-7'>
           {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className='bg-section dark:bg-darklight p-8 rounded-lg shadow-service hover:shadow-xl transition-shadow duration-300 border border-border dark:border-dark_border'
-              data-aos='fade-up'
-              data-aos-delay={index * 100}
-              data-aos-duration='1000'>
-              <div className='mb-4'>
-                <svg
-                  className='w-10 h-10 text-primary opacity-50'
-                  fill='currentColor'
-                  viewBox='0 0 24 24'>
-                  <path d='M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.996 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.984zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z' />
-                </svg>
-              </div>
-              <p className='text-base text-grey dark:text-white/50 mb-6 italic leading-relaxed'>
-                "{testimonial.comment}"
-              </p>
-              <div className='flex items-center gap-2 mb-4'>
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <svg
-                    key={i}
-                    className='w-5 h-5 text-yellow-400 fill-current'
-                    viewBox='0 0 20 20'>
-                    <path d='M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z' />
-                  </svg>
-                ))}
-              </div>
-              <div className='flex items-center'>
-                <div className='w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center text-primary font-bold text-lg mr-4'>
-                  {testimonial.name.charAt(0)}
-                </div>
-                <div>
-                  <h4 className='text-lg font-semibold text-midnight_text dark:text-white'>
-                    {testimonial.name}
-                  </h4>
-                  <p className='text-sm text-grey dark:text-white/50'>
-                    {testimonial.role}
-                  </p>
-                </div>
-              </div>
-            </div>
+            <TestimonialCard key={index} testimonial={testimonial} index={index} />
           ))}
         </div>
       </div>
@@ -89,4 +114,3 @@ const Testimonials = () => {
 }
 
 export default Testimonials
-

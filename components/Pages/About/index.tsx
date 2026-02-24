@@ -29,14 +29,24 @@ const AboutPage = () => {
   const workExperience = [
     {
       company: 'Gillan eSolutions',
-      role: 'Web Developer (Django & WordPress)',
+      role: 'Web Development Intern',
       website: 'https://www.gillanesolutions.com/',
-      duration: 'September 2025 – Present',
+      duration: 'September 2025 – January 2026',
       logo: '/images/companies/gillan-esolutions-logo.jpeg',
       achievement: null,
       description:
-        'Currently working as a Web Developer, gaining hands-on experience in full-stack web development using Django and WordPress. Responsibilities include developing and maintaining dynamic web applications with Django, creating custom WordPress themes and converting static HTML designs into fully functional WordPress websites, implementing responsive user-friendly layouts, collaborating on projects, and optimizing performance.',
+        'Worked as a Web Development Intern where I learned PHP and converted static HTML templates into dynamic WordPress websites using ACF, Custom Post Types, taxonomies, and CMS-based content management. Ensured responsive layouts and editable structures while following structured workflows and real project lifecycles. Although my primary work was in WordPress, I also gained exposure to Django by learning from colleagues working on Django-based applications there.',
     },
+    {
+      company: 'adscale',
+      role: 'Django Developer Intern',
+      website: 'https://adscale.com/',
+      duration: 'July 2025 – January 2026',
+      logo: '/images/companies/adscale-logo.svg',
+      achievement: null,
+      description:
+        'Responsible for Python Django backend development, specializing in REST API creation and database handling. I implemented secure Authentication & Authorization protocols and ensured seamless backend integration with frontend systems. Demonstrated strong work ethics while delivering high-performance solutions. Recognized as a reliable professional, I contributed to technical objectives through dedicated problem-solving and expertise during my tenure at Adscale.'
+    }
   ];
 
   // Education
@@ -144,10 +154,10 @@ const AboutPage = () => {
                 Babar Ali
               </h2>
               <p className="text-xl font-semibold text-primary dark:text-primary mb-6">
-                Full-Stack Developer & AI Enthusiast
+                Full-Stack Developer | WordPress & Django | AI Enthusiast
               </p>
               <p className="text-base font-normal text-grey dark:text-white/70 mb-8 leading-relaxed">
-                I am Babar Ali, a passionate Full-Stack Developer and AI enthusiast. I specialize in building modern, responsive web applications and AI-driven solutions using technologies like React.js, Django, and MySQL. I also have experience with WordPress custom themes and data analytics. I enjoy solving complex problems through technology and creating applications that are both user-friendly and intelligent. My work is driven by curiosity, innovation, and a commitment to delivering high-quality solutions.
+                Full-Stack Developer with hands-on experience in Django, WordPress, REST APIs, and database design. I have built scalable backend systems, dynamic CMS-driven websites, and I am currently developing an AI-powered Final Year Project focused on solving real-world problems through intelligent and secure web applications.
               </p>
 
               <div className="space-y-4 mb-8">
@@ -410,24 +420,24 @@ const AboutPage = () => {
                           />
                         </div>
                       )}
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-midnight_text dark:text-white mb-2">
-                        {work.role}
-                      </h3>
-                      <a
-                        href={work.website}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-lg text-primary hover:text-blue-700 font-medium mb-2 inline-block">
-                        {work.company}
-                      </a>
-                      <p className="text-base text-grey dark:text-white/50 mb-3">{work.duration}</p>
-                      {work.description && (
-                        <p className="text-base text-grey dark:text-white/70 leading-relaxed">
-                          {work.description}
-                        </p>
-                      )}
-                    </div>
+                      <div className="flex-1">
+                        <h3 className="text-2xl font-bold text-midnight_text dark:text-white mb-2">
+                          {work.role}
+                        </h3>
+                        <a
+                          href={work.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-lg text-primary hover:text-blue-700 font-medium mb-2 inline-block">
+                          {work.company}
+                        </a>
+                        <p className="text-base text-grey dark:text-white/50 mb-3">{work.duration}</p>
+                        {work.description && (
+                          <p className="text-base text-grey dark:text-white/70 leading-relaxed">
+                            {work.description}
+                          </p>
+                        )}
+                      </div>
                     </div>
                     {work.achievement && (
                       <span className="px-4 py-2 bg-primary/10 text-primary text-sm font-medium rounded-full">
@@ -492,11 +502,11 @@ const AboutPage = () => {
                   )}
                   <div className="flex-1">
                     <h5 className="text-xl font-bold text-midnight_text dark:text-white mb-1">
-                      {edu.degree.includes('BS') || edu.degree.includes('Bachelor') 
-                        ? 'Bachelor' 
+                      {edu.degree.includes('BS') || edu.degree.includes('Bachelor')
+                        ? 'Bachelor'
                         : edu.degree.includes('F.Sc') || edu.degree.includes('Pre-Engineering')
-                        ? 'Intermediate'
-                        : 'Matriculation'}
+                          ? 'Intermediate'
+                          : 'Matriculation'}
                     </h5>
                     <p className="text-base text-grey dark:text-white/70">{edu.institute}</p>
                   </div>

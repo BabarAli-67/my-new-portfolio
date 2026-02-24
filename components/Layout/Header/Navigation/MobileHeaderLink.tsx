@@ -16,7 +16,7 @@ const MobileHeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
     <div className="relative block w-full">
       <button
         onClick={item.submenu ? handleToggle : undefined}
-        className={`flex items-center justify-between w-full py-2 px-3 text-black rounded-md dark:text-grey focus:outline-hidden ${path === item.href ? 'bg-primary text-white dark:text-white!' : ''} ${path.startsWith("/blog") && item.href==="/blog" ? "bg-primary! text-white dark:text-white!" : ""} ${path.startsWith("/portfolio") && item.href==="/portfolio" ? "bg-primary text-white dark:text-white!" : ""}`}
+        className={`flex items-center justify-between w-full py-2 px-3 text-black rounded-md dark:text-grey focus:outline-hidden ${path === item.href ? 'bg-primary text-white dark:text-white!' : ''} ${path.startsWith("/blog") && item.href === "/blog" ? "bg-primary! text-white dark:text-white!" : ""} ${path.startsWith("/portfolio") && item.href === "/portfolio" ? "bg-primary text-white dark:text-white!" : ""}`}
       >
         <Link href={item.href} className="w-full text-left">
           {item.label}

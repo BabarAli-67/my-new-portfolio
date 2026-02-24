@@ -5,5 +5,48 @@
         "linkedIn": "https://www.linkedin.com/in/faizan-manzar-953a19285/",
         "image": "/images/testimonials/faizan-profile.jpg",
         "comment": "I have known Babar Ali since our first semester, and I have always been impressed by his punctuality, discipline, and strong work ethic. He follows a strict routine and consistently meets his goals. Beyond his academic dedication, Babar inspires those around him with his knowledge of Deen, encourages regular Salah, and shares guidance from the life of the Holy Prophet (PBUH), motivating us to grow both personally and professionally. I highly recommend Babar for any opportunity that values discipline, motivation, and principled leadership."
+    },
+    {
+        "name": "Alyan Rashid",
+        "role": "Senior Dispatcher at Phoenix Enterprises",
+        "linkedIn": "https://www.linkedin.com/in/alyan-rashid-a3a337299/",
+        "image": "/images/testimonials/Alyan-Profile.jpg",
+        "comment": "I’ve had the opportunity to study and collaborate with Babar Ali, and he is a dedicated and highly motivated aspiring full-stack developer. He has a strong grip on Python, Django, WordPress, and web technologies, along with a solid problem-solving mindset. Babar is reliable, hardworking, and always eager to learn. I’m confident he will excel in any web or software development role he pursues."
+    },
+    {
+        "name":"Hafiz Muhammad Bilal",
+        "role": "Full-Stack Developer | UMT",
+        "linkedIn": "https://www.linkedin.com/in/hafiz-muhammad-bilal-963b52233/",
+        "image": "/images/testimonials/Bilal.jpg",
+        "comment":"I’ve had the pleasure of working with Babar Ali as a teammate on our university FYP, and it’s been a great experience so far. Babar is a dedicated and reliable team member who consistently puts in the effort to get things done on time. He approaches tasks with a positive attitude and is always willing to help others when needed. What stands out the most is his problem-solving mindset and his commitment to learning. Even when we face challenges in the project, he stays focused, contributes useful ideas, and works hard to find practical solutions. It’s been great collaborating with him, and I’m confident he’ll continue to grow and succeed in his field. I’d definitely recommend Babar to anyone looking for a hardworking and supportive team member."
+    },
+    {
+        "name": "Hanzla Sajid",
+        "role": "Flutter Developer Intern at Techeezy",
+        "linkedIn": "https://www.linkedin.com/in/hanzla-sajid-03a686365/",
+        "image": "/images/testimonials/Hanzla.jpg",
+        "comment": "I have known Babar for several years, and I have been very impressed with his technical skills and dedication to his work. Babar is proficient in several programming languages, including Django, Java, C++, and PHP. In addition to his technical skills, Babar is also a good team player, who is always willing to help others. I highly recommend Babar as a valuable asset to any organization"
+    },
+    {
+        "name": "Muhammad Abdullah",
+        "role": "Computer Science Student at UMT",
+        "linkedIn": "https://www.linkedin.com/in/muhammad-abdullah-5042a637a/",
+        "image": "/images/testimonials/Abdullah.jpg",
+        "comment": "I studied with Babar Ali in several courses and consistently benefited from his guidance and support. He is not only a strong developer with solid technical skills, but also a reliable mentor who explains complex concepts clearly and effectively. During the website development phase of my Final Year Project, Babar provided valuable guidance, helped resolve challenges, and motivated me to improve. He demonstrates strong leadership, collaboration, and problem-solving skills. I highly recommend Babar Ali for industry roles that value technical expertise, teamwork, and leadership potential."
+    },
+    {
+        "name": "Muhammad Abrar",
+        "role": "Full-Stack Developer at Gillan",
+        "linkedIn": "https://www.linkedin.com/in/muhammad-abrar-b1508a357/",
+        "image": "/images/testimonials/Abrar.jpg",
+        "comment": "Although I did not manage Babar Ali directly, I had the opportunity to work closely with him and observed his exceptional drive and talent. He is a highly motivated and eager learner, always keen to explore new concepts and expand his skills. While I worked as a Django developer, Babar showed great interest in learning Django. Whenever I shared insights or explained concepts, he was genuinely attentive and eager to understand and apply them. This curiosity, combined with his strong expertise in WordPress development, including theme and plugin customization and responsive design, makes him a versatile and growth-oriented developer. Babar approaches challenges methodically, adapts quickly to new technologies, and consistently demonstrates professionalism. I highly recommend Babar for roles in WordPress development, web development, or full-stack projects, as he brings both technical skill and a strong learning mindset to any team."
+    },
+    {
+        "name": "Hamid Shehzad",
+        "role": "Computer Science Student at UMT",
+        "linkedIn": "https://www.linkedin.com/in/hamidshehzad/",
+        "image": "/images/testimonials/Hamid.jpg",
+        "comment": "Babar Ali is a highly motivated and passionate individual when it comes to his career in web development. We studied together in a web development course, and from the early stages of our degree, Babar demonstrated a strong grasp of core concepts and was always willing to help others understand them. He has particularly strong knowledge of web development and databases, with a clear understanding of how backend systems are designed and connected to applications. In the beginning of our degree, Babar helped me understand several foundational concepts, which reflects both his technical competence and his ability to explain complex topics clearly. Babar is dedicated, hardworking, and continuously improving his skill set. I would confidently recommend him for opportunities in Web Development, Backend Development, or Database-focused roles"
+
     }
 ]

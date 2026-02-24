@@ -21,10 +21,10 @@ const Hero = () => {
             Babar Ali
           </h1>
           <h2 className='text-midnight_text font-semibold dark:text-white text-2xl md:text-3xl md:leading-tight'>
-            Full-Stack Developer & AI Enthusiast
+          Full-Stack Developer | WordPress & Django | AI Enthusiast
           </h2>
           <p className='text-grey dark:text-white/70 text-xl font-semibold'>
-            Building modern web applications and AI-driven solutions with React.js and Django.
+            Building scalable web applications, REST APIs, and intelligent systems using Django, React, and modern CMS technologies.
           </p>
           <Link
             href='/contact'

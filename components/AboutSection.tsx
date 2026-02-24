@@ -46,7 +46,7 @@ export default function AboutSection() {
 
             {/* Main Paragraph */}
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-              I am Babar Ali, a passionate Full-Stack Developer and AI enthusiast. I have hands-on experience with React, Next.js, Django, MySQL, and AI integration. I enjoy building smart, user-friendly applications and solving complex problems with technology.
+              Full-Stack Developer with hands-on experience in Django, WordPress, REST APIs, and database design. I have built scalable backend systems, dynamic CMS-driven websites, and I am currently developing an AI-powered Final Year Project focused on solving real-world problems through intelligent and secure web applications.
             </p>
 
             {/* Key Points / Timeline */}

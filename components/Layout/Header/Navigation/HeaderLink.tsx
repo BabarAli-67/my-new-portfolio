@@ -24,7 +24,7 @@ const HeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <Link href={item.href} className={`text-base flex py-2 font-normal hover:text-primary dark:hover:text-primary text-black dark:text-white ${path === item.href ? 'text-primary dark:text-primary!' : ''} ${path.startsWith("/blog") && item.href==="/blog" ? "text-primary! dark:text-primary!" : ""} ${path.startsWith("/portfolio") && item.href==="/portfolio" ? "text-primary! dark:text-primary!" : ""}`}>
+      <Link href={item.href} className={`text-base flex py-2 font-normal hover:text-primary dark:hover:text-primary text-black dark:text-white ${path === item.href ? 'text-primary dark:text-primary!' : ''} ${path.startsWith("/blog") && item.href === "/blog" ? "text-primary! dark:text-primary!" : ""} ${path.startsWith("/portfolio") && item.href === "/portfolio" ? "text-primary! dark:text-primary!" : ""}`}>
         {item.label}
         {item.submenu && (
           <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
@@ -42,11 +42,10 @@ const HeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
             <Link
               key={index}
               href={subItem.href}
-              className={`block px-4 py-2 text-[15px] ${
-                path === subItem.href
+              className={`block px-4 py-2 text-[15px] ${path === subItem.href
                   ? "bg-primary text-white"
                   : "text-black hover:bg-gray-200 dark:hover:bg-midnight_text dark:text-white hover:text-dark dark:hover:text-white"
-              }`}
+                }`}
             >
               {subItem.label}
             </Link>

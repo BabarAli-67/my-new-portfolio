@@ -80,10 +80,30 @@ const TestimonialCard = ({ testimonial, index }: { testimonial: Testimonial, ind
 };
 
 const Testimonials = () => {
-  const testimonials: Testimonial[] = testimonialsData
+  const testimonials: Testimonial[] = testimonialsData;
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(true);
+
+  React.useEffect(() => {
+    if (testimonials.length === 0) return;
+    const timer = setInterval(() => {
+      setIsTransitioning(true);
+      setCurrentIndex((prevIndex) => prevIndex + 1);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [testimonials.length]);
+
+  const handleTransitionEnd = () => {
+    if (currentIndex >= testimonials.length) {
+      setIsTransitioning(false);
+      setCurrentIndex(0);
+    }
+  };
+
+  const extendedTestimonials = testimonials.length > 0 ? [...testimonials, testimonials[0]] : [];
 
   return (
-    <section className='bg-white dark:bg-darkmode py-16' id='testimonials'>
+    <section className='bg-white dark:bg-darkmode py-16 overflow-hidden' id='testimonials'>
       <div className='container mx-auto max-w-6xl px-4'>
         <div className='flex gap-2 items-center justify-center mb-8' data-aos='fade-up' data-aos-delay='200' data-aos-duration='1000'>
           <span className='w-3 h-3 rounded-full bg-success'></span>
@@ -103,11 +123,24 @@ const Testimonials = () => {
             Testimonials from colleagues, mentors, and clients
           </p>
         </div>
-        <div className='grid md:grid-cols-3 grid-cols-1 gap-7'>
-          {testimonials.map((testimonial, index) => (
-            <TestimonialCard key={index} testimonial={testimonial} index={index} />
-          ))}
+
+        {/* Carousel Container */}
+        <div className='relative w-full max-w-3xl mx-auto'>
+          <div className='overflow-hidden'>
+            <div
+              className={`flex ${isTransitioning ? 'transition-transform duration-700 ease-in-out' : ''}`}
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+              onTransitionEnd={handleTransitionEnd}
+            >
+              {extendedTestimonials.map((testimonial, index) => (
+                <div key={index} className='w-full flex-shrink-0 px-4'>
+                  <TestimonialCard testimonial={testimonial} index={index} />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
+
       </div>
     </section>
   )

@@ -5,7 +5,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About | Babar Ali - Full-Stack Developer & AI Enthusiast</title>
+        <title>About | Babar Ali - Full-Stack Developer | WordPress & Django | AI Enthusiast</title>
         <meta name="description" content="Learn more about Babar Ali - Full-Stack Developer and AI enthusiast. Education, skills, and experience in React, Next.js, Django, and AI integration." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:title" content="About | Babar Ali - Full-Stack Developer" />

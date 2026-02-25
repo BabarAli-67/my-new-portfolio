@@ -22,43 +22,12 @@ const Footer: FC = () => {
               Let&apos;s work together to bring your ideas to life. Get in touch to discuss your next project.
             </p>
             <Link
-              href="/contact"
+              href="/#contact"
               className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">
               Get Started
             </Link>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-bold text-white mb-4">Quick Links</h4>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/#about" className="text-white/70 hover:text-primary transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/#services" className="text-white/70 hover:text-primary transition-colors">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/portfolio" className="text-white/70 hover:text-primary transition-colors">
-                  Portfolio
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-white/70 hover:text-primary transition-colors">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-white/70 hover:text-primary transition-colors">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
 
           {/* Contact & Social */}
           <div>
@@ -149,14 +118,7 @@ const Footer: FC = () => {
             <p className="text-white/50 text-sm text-center md:text-left">
               © {currentYear} Babar Ali. All rights reserved.
             </p>
-            <div className="flex items-center gap-6">
-              <Link href="/about" className="text-white/50 hover:text-primary text-sm transition-colors">
-                About
-              </Link>
-              <Link href="/contact" className="text-white/50 hover:text-primary text-sm transition-colors">
-                Contact
-              </Link>
-            </div>
+
           </div>
         </div>
       </div>
